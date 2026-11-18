@@ -1,8 +1,9 @@
 {
   "currency": "AUD",
   "location": {
-    "citySlug": "melbourne",
-    "displayName": "Melbourne, VIC",
+    "citySlug": "sydney",
+    "displayName": "Blacktown / Sydney, NSW",
+    "suburb": "Blacktown",
     "radiusKm": 40
   },
   "filters": {
