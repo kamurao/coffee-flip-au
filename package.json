@@ -1,0 +1,14 @@
+{
+  "name": "coffee-flip-au",
+  "version": "1.0.0",
+  "description": "PC-free automated Facebook Marketplace deal finder for high-volume coffee equipment (AUD) with 30-50%+ profit filtering, broken-item rejection, mobile alerts & dashboard.",
+  "type": "module",
+  "scripts": {
+    "scan": "node src/scan.js",
+    "scan:demo": "node src/scan.js --demo",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

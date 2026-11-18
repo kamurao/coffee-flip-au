@@ -1,0 +1,584 @@
+[
+  {
+    "id": "breville-bes920",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Dual Boiler (BES920)",
+    "patterns": [
+      "\\bbes\\s?920\\w*\\b",
+      "\\bbreville\\s+dual\\s+boiler\\b"
+    ],
+    "excludePatterns": [
+      "\\boracle\\b",
+      "\\bbes\\s?980\\b",
+      "\\bbes\\s?990\\b"
+    ],
+    "resaleLowAUD": 750,
+    "resaleMedianAUD": 900,
+    "resaleHighAUD": 1100,
+    "liquidity": "high",
+    "demandScore": 10,
+    "notes": "Australia's #1 fastest-flipping prosumer machine. Check steam wand & boiler O-rings."
+  },
+  {
+    "id": "breville-bes870",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Barista Express (BES870)",
+    "patterns": [
+      "\\bbes\\s?870\\w*\\b",
+      "\\bbarista\\s+express\\b"
+    ],
+    "excludePatterns": [
+      "\\bimpress\\b",
+      "\\bbes\\s?876\\b",
+      "\\bpro\\b",
+      "\\btouch\\b"
+    ],
+    "resaleLowAUD": 380,
+    "resaleMedianAUD": 450,
+    "resaleHighAUD": 550,
+    "liquidity": "high",
+    "demandScore": 10,
+    "notes": "Highest volume entry espresso machine in AU; sells within days under $450."
+  },
+  {
+    "id": "breville-bes876",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Barista Express Impress (BES876)",
+    "patterns": [
+      "\\bbes\\s?876\\w*\\b",
+      "\\bbarista\\s+express\\s+impress\\b"
+    ],
+    "excludePatterns": [
+      "\\btouch\\b"
+    ],
+    "resaleLowAUD": 520,
+    "resaleMedianAUD": 620,
+    "resaleHighAUD": 750,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Assisted-tamp version of Barista Express; strong demand."
+  },
+  {
+    "id": "breville-bes878",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Barista Pro (BES878)",
+    "patterns": [
+      "\\bbes\\s?878\\w*\\b",
+      "\\bbarista\\s+pro\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 580,
+    "resaleMedianAUD": 680,
+    "resaleHighAUD": 800,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Fast heat-up ThermoJet + LCD; popular upgrade from BES870."
+  },
+  {
+    "id": "breville-bes880",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Barista Touch (BES880)",
+    "patterns": [
+      "\\bbes\\s?880\\w*\\b",
+      "\\bbarista\\s+touch\\b"
+    ],
+    "excludePatterns": [
+      "\\bimpress\\b",
+      "\\bbes\\s?881\\b"
+    ],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 950,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Touchscreen + auto milk; strong mainstream buyer demand."
+  },
+  {
+    "id": "breville-bes500",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Bambino Plus (BES500)",
+    "patterns": [
+      "\\bbes\\s?500\\w*\\b",
+      "\\bbambino\\s+plus\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 320,
+    "resaleMedianAUD": 380,
+    "resaleHighAUD": 450,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Compact, fast heat-up, auto steam wand; very easy flip."
+  },
+  {
+    "id": "breville-bes980",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "The Oracle (BES980)",
+    "patterns": [
+      "\\bbes\\s?980\\w*\\b",
+      "\\bbreville\\s+oracle\\b"
+    ],
+    "excludePatterns": [
+      "\\btouch\\b",
+      "\\bbes\\s?990\\b"
+    ],
+    "resaleLowAUD": 1100,
+    "resaleMedianAUD": 1350,
+    "resaleHighAUD": 1600,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Rarely under $1000 working — instant high-margin flip if found."
+  },
+  {
+    "id": "breville-bes990",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Breville",
+    "model": "Oracle Touch (BES990)",
+    "patterns": [
+      "\\bbes\\s?990\\w*\\b",
+      "\\boracle\\s+touch\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 1350,
+    "resaleMedianAUD": 1650,
+    "resaleHighAUD": 2000,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Flagship Breville; huge margin if ever listed under $1000."
+  },
+  {
+    "id": "rancilio-silvia",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Rancilio",
+    "model": "Silvia (V3–V6)",
+    "patterns": [
+      "\\brancilio\\s+silvia\\b"
+    ],
+    "excludePatterns": [
+      "\\bpro\\s*x\\b",
+      "\\bpro\\b"
+    ],
+    "resaleLowAUD": 600,
+    "resaleMedianAUD": 750,
+    "resaleHighAUD": 950,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Cult classic 58mm single boiler; holds value extremely well in AU."
+  },
+  {
+    "id": "gaggia-classic",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Gaggia",
+    "model": "Classic / Classic Pro",
+    "patterns": [
+      "\\bgaggia\\s+classic\\b",
+      "\\bri9480\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 420,
+    "resaleMedianAUD": 520,
+    "resaleHighAUD": 650,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Popular modder & starter 58mm machine."
+  },
+  {
+    "id": "lelit-anna",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Lelit",
+    "model": "Anna (PL41TEM / PL41)",
+    "patterns": [
+      "\\blelit\\s+anna\\b",
+      "\\bpl41\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 500,
+    "resaleMedianAUD": 600,
+    "resaleHighAUD": 720,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "PID single boiler; strong enthusiast demand."
+  },
+  {
+    "id": "lelit-victoria",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Lelit",
+    "model": "Victoria (PL91T)",
+    "patterns": [
+      "\\blelit\\s+victoria\\b",
+      "\\bpl91t\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 900,
+    "resaleMedianAUD": 1050,
+    "resaleHighAUD": 1250,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "58mm PID Lelit; great flip under $750."
+  },
+  {
+    "id": "lelit-mara-x",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Lelit",
+    "model": "Mara X (PL62X)",
+    "patterns": [
+      "\\blelit\\s+mara\\s*x?\\b",
+      "\\bpl62x\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 1500,
+    "resaleMedianAUD": 1750,
+    "resaleHighAUD": 2000,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Compact E61 HX; massive flip if listed under $1000."
+  },
+  {
+    "id": "profitec-go",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Profitec",
+    "model": "Profitec Go",
+    "patterns": [
+      "\\bprofitec\\s+go\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 1300,
+    "resaleMedianAUD": 1500,
+    "resaleHighAUD": 1750,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Top-rated German 58mm PID machine ($2300 new in AU)."
+  },
+  {
+    "id": "rocket-appartamento",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Rocket",
+    "model": "Appartamento",
+    "patterns": [
+      "\\brocket\\s+appartamento\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 1550,
+    "resaleMedianAUD": 1800,
+    "resaleHighAUD": 2150,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Iconic E61 machine; huge resale liquidity."
+  },
+  {
+    "id": "flair-58",
+    "category": "coffee",
+    "subCategory": "espresso_machine",
+    "brand": "Flair",
+    "model": "Flair 58 / 58+",
+    "patterns": [
+      "\\bflair\\s+58\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 460,
+    "resaleMedianAUD": 550,
+    "resaleHighAUD": 650,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Manual lever espresso; niche but loyal buyers."
+  },
+  {
+    "id": "niche-zero",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Niche",
+    "model": "Niche Zero",
+    "patterns": [
+      "\\bniche\\s+zero\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 780,
+    "resaleMedianAUD": 880,
+    "resaleHighAUD": 1000,
+    "liquidity": "high",
+    "demandScore": 10,
+    "notes": "Gold-standard single-dose conical grinder; sells almost immediately."
+  },
+  {
+    "id": "df64-gen2",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Turin / DF",
+    "model": "DF64 / DF64 Gen 2",
+    "patterns": [
+      "\\bdf\\s?64\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 430,
+    "resaleMedianAUD": 520,
+    "resaleHighAUD": 620,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "64mm flat-burr single doser; very high enthusiast demand."
+  },
+  {
+    "id": "df83",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Turin / DF",
+    "model": "DF83",
+    "patterns": [
+      "\\bdf\\s?83\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 900,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "83mm flat-burr single doser."
+  },
+  {
+    "id": "eureka-specialita",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Specialita",
+    "patterns": [
+      "\\beureka\\s+(?:mignon\\s+)?specialit[aà]\\b",
+      "\\bspecialit[aà]\\s+grinder\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 480,
+    "resaleMedianAUD": 580,
+    "resaleHighAUD": 700,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Quiet 55mm flat-burr Italian grinder; very liquid."
+  },
+  {
+    "id": "eureka-silenzio",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Silenzio",
+    "patterns": [
+      "\\beureka\\s+(?:mignon\\s+)?silenzio\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 350,
+    "resaleMedianAUD": 420,
+    "resaleHighAUD": 500,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Reliable entry Eureka Mignon."
+  },
+  {
+    "id": "eureka-zero",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Zero",
+    "patterns": [
+      "\\beureka\\s+(?:mignon\\s+)?zero\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 400,
+    "resaleMedianAUD": 480,
+    "resaleHighAUD": 580,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "Single-dose Mignon variant."
+  },
+  {
+    "id": "baratza-sette-270",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Baratza",
+    "model": "Sette 270 / 270Wi",
+    "patterns": [
+      "\\bsette\\s+270\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 360,
+    "resaleMedianAUD": 450,
+    "resaleHighAUD": 550,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Fast macro/micro espresso grinder; check gearbox noise."
+  },
+  {
+    "id": "baratza-encore-esp",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Baratza",
+    "model": "Encore ESP",
+    "patterns": [
+      "\\bencore\\s+esp\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 180,
+    "resaleMedianAUD": 220,
+    "resaleHighAUD": 260,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Popular starter espresso/filter grinder."
+  },
+  {
+    "id": "breville-bcg820",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Breville",
+    "model": "Smart Grinder Pro (BCG820)",
+    "patterns": [
+      "\\bsmart\\s+grinder\\s+pro\\b",
+      "\\bbcg\\s?820\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 150,
+    "resaleMedianAUD": 180,
+    "resaleHighAUD": 220,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "High turnover; easy $180 flip if bought at $80–$120."
+  },
+  {
+    "id": "timemore-064s",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Timemore",
+    "model": "Sculptor 064S",
+    "patterns": [
+      "\\bsculptor\\s+064s\\b",
+      "\\btimemore\\s+064s\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 600,
+    "resaleMedianAUD": 720,
+    "resaleHighAUD": 850,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "64mm variable-RPM single doser."
+  },
+  {
+    "id": "mazzer-mini",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Mazzer",
+    "model": "Mazzer Mini / Super Jolly",
+    "patterns": [
+      "\\bmazzer\\s+(?:mini|super\\s+jolly)\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 420,
+    "resaleMedianAUD": 550,
+    "resaleHighAUD": 700,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Built like a tank; check burr wear."
+  },
+  {
+    "id": "fellow-ode-gen2",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Fellow",
+    "model": "Ode Gen 2",
+    "patterns": [
+      "\\bfellow\\s+ode\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 320,
+    "resaleMedianAUD": 380,
+    "resaleHighAUD": 450,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Top filter/pour-over flat-burr grinder."
+  },
+  {
+    "id": "bambu-a1-mini",
+    "category": "printers",
+    "subCategory": "3d_printer",
+    "brand": "Bambu Lab",
+    "model": "A1 Mini",
+    "patterns": [
+      "\\ba1\\s+mini\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 270,
+    "resaleMedianAUD": 320,
+    "resaleHighAUD": 380,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Compact, high-demand starter printer."
+  },
+  {
+    "id": "bambu-a1",
+    "category": "printers",
+    "subCategory": "3d_printer",
+    "brand": "Bambu Lab",
+    "model": "Bambu Lab A1",
+    "patterns": [
+      "\\bbambu\\s*(?:lab)?\\s+a1\\b"
+    ],
+    "excludePatterns": [
+      "\\bmini\\b"
+    ],
+    "resaleLowAUD": 420,
+    "resaleMedianAUD": 480,
+    "resaleHighAUD": 560,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Very popular bed-slinger."
+  },
+  {
+    "id": "bambu-p1s",
+    "category": "printers",
+    "subCategory": "3d_printer",
+    "brand": "Bambu Lab",
+    "model": "Bambu Lab P1S",
+    "patterns": [
+      "\\bp1s\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 750,
+    "resaleMedianAUD": 850,
+    "resaleHighAUD": 980,
+    "liquidity": "high",
+    "demandScore": 10,
+    "notes": "Enclosed CoreXY; very fast resale."
+  },
+  {
+    "id": "herman-miller-aeron",
+    "category": "furniture",
+    "subCategory": "ergonomic_chair",
+    "brand": "Herman Miller",
+    "model": "Aeron Chair",
+    "patterns": [
+      "\\bherman\\s+miller\\s+aeron\\b",
+      "\\baeron\\s+chair\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 800,
+    "resaleHighAUD": 1000,
+    "liquidity": "high",
+    "demandScore": 9,
+    "notes": "Fits easily in a Suzuki Swift with rear seats folded."
+  }
+]

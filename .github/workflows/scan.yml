@@ -1,0 +1,47 @@
+name: Scan FB Marketplace (AU)
+
+on:
+  schedule:
+    # Every 2 hours during Australian waking hours (~7am - 10pm AEST/AEDT)
+    - cron: "0 21,23,1,3,5,7,9,11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fb-marketplace-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Run CoffeeFlip AU scan
+        env:
+          APIFY_TOKEN: ${{ secrets.APIFY_TOKEN }}
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: npm run scan
+
+      - name: Commit updated deals & seen state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/deals.json data/seen.json docs/data/deals.json docs/data/catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: update FB Marketplace deals"
+            git push
+          else
+            echo "No new changes to commit."
+          fi

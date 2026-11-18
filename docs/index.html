@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoffeeFlip AU — FB Marketplace Deal Finder</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="logo">☕</span>
+        <div>
+          <h1>CoffeeFlip AU</h1>
+          <p id="statusLine" class="subtitle">Loading scan status...</p>
+        </div>
+      </div>
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-tab="deals" role="tab">Deals</button>
+        <button class="tab" data-tab="checker" role="tab">Quick Check</button>
+        <button class="tab" data-tab="cheatsheet" role="tab">Buy Targets</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- DEALS TAB -->
+    <section id="tab-deals" class="tab-panel active">
+      <div class="stats-grid" id="statsGrid"></div>
+
+      <div class="controls">
+        <input id="dealSearch" type="search" placeholder="Search model, brand, suburb..." />
+        <select id="dealFilter">
+          <option value="all">All 30%+ Deals</option>
+          <option value="50+">🔥 50%+ Profit Only</option>
+          <option value="espresso_machine">Espresso Machines</option>
+          <option value="grinder">Grinders</option>
+        </select>
+        <select id="dealSort">
+          <option value="profitPct">Sort: Highest %</option>
+          <option value="profitAUD">Sort: Highest $ Profit</option>
+          <option value="priceAsc">Sort: Lowest Price</option>
+        </select>
+      </div>
+
+      <div id="dealsList" class="deals-grid"></div>
+    </section>
+
+    <!-- QUICK CHECKER TAB -->
+    <section id="tab-checker" class="tab-panel">
+      <div class="card checker-card">
+        <h2>Quick Listing Checker</h2>
+        <p class="muted">Paste a FB Marketplace listing from your phone to check if it passes the broken-item filter and hits 30–50%+ profit.</p>
+        <form id="checkerForm" class="checker-form">
+          <label>
+            Listing Title
+            <input id="chkTitle" type="text" required placeholder="e.g. Breville Dual Boiler BES920" />
+          </label>
+          <label>
+            Ask Price (AUD $)
+            <input id="chkPrice" type="number" min="1" required placeholder="e.g. 520" />
+          </label>
+          <label>
+            Description (optional)
+            <textarea id="chkDesc" rows="3" placeholder="Paste seller description to check for hidden faults..."></textarea>
+          </label>
+          <button type="submit" class="btn-primary">Check Profit &amp; Condition</button>
+        </form>
+        <div id="checkerResult" class="checker-result hidden"></div>
+      </div>
+    </section>
+
+    <!-- BUY TARGETS CHEAT SHEET TAB -->
+    <section id="tab-cheatsheet" class="tab-panel">
+      <div class="controls">
+        <input id="catalogSearch" type="search" placeholder="Filter models (e.g. Breville, Niche, Rancilio)..." />
+        <select id="catalogType">
+          <option value="all">All Coffee Equipment</option>
+          <option value="espresso_machine">Espresso Machines</option>
+          <option value="grinder">Grinders</option>
+          <option value="3d_printer">3D Printers (Optional)</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table class="cheat-table">
+          <thead>
+            <tr>
+              <th>Model</th>
+              <th>Type</th>
+              <th>Max Buy (50%+)</th>
+              <th>Max Buy (30%+)</th>
+              <th>Est. Resale (AUD)</th>
+              <th>Volume</th>
+            </tr>
+          </thead>
+          <tbody id="catalogBody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

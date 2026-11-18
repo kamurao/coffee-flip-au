@@ -1,0 +1,52 @@
+{
+  "currency": "AUD",
+  "location": {
+    "citySlug": "melbourne",
+    "displayName": "Melbourne, VIC",
+    "radiusKm": 40
+  },
+  "filters": {
+    "minPriceAUD": 30,
+    "maxPriceAUD": 1000,
+    "minProfitPct": 30,
+    "highProfitPct": 50,
+    "prepBufferAUD": 0,
+    "excludePendingOrSold": true,
+    "excludeAccessoriesOnly": true
+  },
+  "categories": {
+    "coffee": true,
+    "printers": false,
+    "furniture": false
+  },
+  "suzukiSwiftMaxCm": {
+    "length": 120,
+    "width": 80,
+    "height": 70
+  },
+  "apify": {
+    "actorId": "apify~facebook-marketplace-scraper",
+    "resultsPerQuery": 25,
+    "searchQueries": {
+      "coffee": [
+        "breville coffee machine",
+        "espresso machine",
+        "coffee grinder",
+        "rancilio silvia",
+        "lelit espresso",
+        "niche zero grinder",
+        "df64 grinder",
+        "eureka mignon"
+      ],
+      "printers": [
+        "bambu lab",
+        "prusa 3d printer",
+        "3d printer"
+      ],
+      "furniture": [
+        "herman miller",
+        "mid century sideboard"
+      ]
+    }
+  }
+}
