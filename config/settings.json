@@ -27,7 +27,10 @@
   },
   "apify": {
     "actorId": "apify~facebook-marketplace-scraper",
-    "resultsPerQuery": 25,
+    "resultsPerQuery": 4,
+    "queriesPerRun": 3,
+    "daysSinceListed": 7,
+    "monthlyResultBudget": 750,
     "searchQueries": {
       "coffee": [
         "breville coffee machine",

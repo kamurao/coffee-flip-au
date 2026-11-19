@@ -3,7 +3,8 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { evaluateListingFilter, fitsSuzukiSwift } from "./filter.js";
 import { matchCatalogItem } from "./matcher.js";
-import { fetchMarketplaceListings } from "./apify.js";
+import { fetchMarketplaceListings, activeQueries } from "./apify.js";
+import { loadUsage, pickRotation, worstCaseResults, canAfford } from "./budget.js";
 import { sendAlerts } from "./notify.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -34,9 +35,38 @@ async function main() {
     console.log("[CoffeeFlip AU] APIFY_TOKEN not set — running in demo mode with sample listings.");
   }
 
-  const rawListings = useDemo
-    ? readJson("data/demo-listings.json")
-    : await fetchMarketplaceListings(settings, token);
+  let usage = loadUsage(fs.existsSync(path.join(ROOT, "data/usage.json")) ? readJson("data/usage.json") : null);
+  const budget = settings.apify?.monthlyResultBudget ?? Infinity;
+  const perQuery = settings.apify?.resultsPerQuery ?? 25;
+
+  let rawListings;
+  if (useDemo) {
+    rawListings = readJson("data/demo-listings.json");
+  } else {
+    const { picked, nextCursor } = pickRotation(
+      activeQueries(settings),
+      usage.cursor,
+      settings.apify?.queriesPerRun ?? Infinity
+    );
+    const worst = worstCaseResults(picked.length, perQuery);
+    if (!canAfford(usage, worst, budget)) {
+      console.log(
+        `[CoffeeFlip AU] Monthly Apify budget reached (${usage.resultsBilled}/${budget} listings in ${usage.month}) — skipping scan.`
+      );
+      return;
+    }
+    console.log(`[CoffeeFlip AU] Queries this run: ${picked.join(" | ")}`);
+    const fetched = await fetchMarketplaceListings(settings, token, picked);
+    rawListings = fetched.listings;
+    usage = {
+      month: usage.month,
+      runs: usage.runs + 1,
+      resultsBilled: usage.resultsBilled + fetched.billed,
+      cursor: nextCursor,
+    };
+    writeJson("data/usage.json", usage);
+    console.log(`[CoffeeFlip AU] Apify usage ${usage.month}: ${usage.resultsBilled}/${budget} listings over ${usage.runs} run(s).`);
+  }
 
   let rejectedBroken = 0;
   let matchedCatalog = 0;

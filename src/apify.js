@@ -1,22 +1,25 @@
 /**
  * Build Facebook Marketplace search URLs for active categories and call Apify Actor.
  */
-export function buildSearchUrls(settings) {
-  const citySlug = settings.location?.citySlug || "melbourne";
-  const maxPrice = settings.filters?.maxPriceAUD ?? 1000;
+export function activeQueries(settings) {
   const activeCategories = settings.categories || { coffee: true };
   const queryMap = settings.apify?.searchQueries || {};
-
   const queries = [];
   for (const [cat, enabled] of Object.entries(activeCategories)) {
-    if (enabled && Array.isArray(queryMap[cat])) {
-      queries.push(...queryMap[cat]);
-    }
+    if (enabled && Array.isArray(queryMap[cat])) queries.push(...queryMap[cat]);
   }
+  return queries;
+}
+
+export function buildSearchUrls(settings, queriesOverride) {
+  const citySlug = settings.location?.citySlug || "melbourne";
+  const maxPrice = settings.filters?.maxPriceAUD ?? 1000;
+  const days = settings.apify?.daysSinceListed ?? 1;
+  const queries = queriesOverride || activeQueries(settings);
 
   return queries.map((q) => {
     const encoded = encodeURIComponent(q);
-    return `https://www.facebook.com/marketplace/${citySlug}/search/?query=${encoded}&maxPrice=${maxPrice}&daysSinceListed=1`;
+    return `https://www.facebook.com/marketplace/${citySlug}/search/?query=${encoded}&maxPrice=${maxPrice}&daysSinceListed=${days}`;
   });
 }
 
@@ -92,17 +95,17 @@ export function normalizeApifyListing(raw) {
 /**
  * Fetch listings from Apify Facebook Marketplace Scraper Actor.
  */
-export async function fetchMarketplaceListings(settings, token) {
+export async function fetchMarketplaceListings(settings, token, queriesOverride) {
   if (!token) {
     throw new Error("APIFY_TOKEN is not set");
   }
 
   const actorId = settings.apify?.actorId || "apify~facebook-marketplace-scraper";
   const resultsPerQuery = settings.apify?.resultsPerQuery ?? 25;
-  const startUrls = buildSearchUrls(settings).map((url) => ({ url }));
+  const startUrls = buildSearchUrls(settings, queriesOverride).map((url) => ({ url }));
 
   if (startUrls.length === 0) {
-    return [];
+    return { listings: [], billed: 0 };
   }
 
   const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(actorId)}/run-sync-get-dataset-items?token=${encodeURIComponent(token)}`;
@@ -122,7 +125,7 @@ export async function fetchMarketplaceListings(settings, token) {
   }
 
   const items = await res.json();
-  if (!Array.isArray(items)) return [];
+  if (!Array.isArray(items)) return { listings: [], billed: 0 };
 
   // Deduplicate by listing ID across overlapping search queries
   const byId = new Map();
@@ -133,5 +136,5 @@ export async function fetchMarketplaceListings(settings, token) {
     }
   }
 
-  return Array.from(byId.values());
+  return { listings: Array.from(byId.values()), billed: items.length };
 }

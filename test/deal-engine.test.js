@@ -93,3 +93,15 @@ test("Suzuki Swift dimension checker handles cm and mm", () => {
   assert.equal(fitsSuzukiSwift("Large dining table 180 x 90 x 75 cm").fits, false);
   assert.equal(fitsSuzukiSwift("Herman Miller Aeron chair, great condition").fits, true);
 });
+
+import { loadUsage, pickRotation, canAfford } from "../src/budget.js";
+
+test("budget guard rotates queries, resets monthly and blocks overspend", () => {
+  const q = ["a", "b", "c", "d", "e"];
+  assert.deepEqual(pickRotation(q, 3, 3), { picked: ["d", "e", "a"], nextCursor: 1 });
+  const u = loadUsage({ month: "2026-10", runs: 9, resultsBilled: 700, cursor: 2 }, new Date("2026-11-02"));
+  assert.equal(u.resultsBilled, 0);
+  assert.equal(u.cursor, 2);
+  assert.equal(canAfford({ resultsBilled: 740 }, 12, 750), false);
+  assert.equal(canAfford({ resultsBilled: 700 }, 12, 750), true);
+});

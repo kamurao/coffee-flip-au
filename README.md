@@ -5,7 +5,7 @@ Automated, **PC-free** Facebook Marketplace deal finder for **high-volume, high-
 - **Budget cap:** Everything under **$1,000 AUD**
 - **Profit target:** Minimum **30% profit** (with **🔥 50%+ Flip** alerts)
 - **No broken equipment:** Automatically rejects parts-only, leaking, faulty, tripping, untested, or accessory-only listings
-- **PC-free 24/7 scanning:** Runs on GitHub Actions + Apify's free $5/month tier and sends instant push alerts to your phone
+- **PC-free scanning:** Runs twice daily on GitHub Actions + Apify's free $5/month tier (budget-guarded, ~750 listings/month) and sends instant push alerts to your phone
 - **Mobile Web Dashboard:** Hosted on GitHub Pages (`docs/`), including a **Quick Listing Checker** and **Buy Target Cheat Sheet**
 
 ---
