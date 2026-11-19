@@ -327,7 +327,7 @@
     "brand": "Turin / DF",
     "model": "DF64 / DF64 Gen 2",
     "patterns": [
-      "\\bdf\\s?64\\b"
+      "\\bdf\\s?64\\w*\\b"
     ],
     "excludePatterns": [],
     "resaleLowAUD": 430,
@@ -344,7 +344,7 @@
     "brand": "Turin / DF",
     "model": "DF83",
     "patterns": [
-      "\\bdf\\s?83\\b"
+      "\\bdf\\s?83\\w*\\b"
     ],
     "excludePatterns": [],
     "resaleLowAUD": 650,
@@ -364,7 +364,9 @@
       "\\beureka\\s+(?:mignon\\s+)?specialit[aà]\\b",
       "\\bspecialit[aà]\\s+grinder\\b"
     ],
-    "excludePatterns": [],
+    "excludePatterns": [
+      "\\batom\\b"
+    ],
     "resaleLowAUD": 480,
     "resaleMedianAUD": 580,
     "resaleHighAUD": 700,
@@ -509,6 +511,495 @@
     "liquidity": "high",
     "demandScore": 8,
     "notes": "Top filter/pour-over flat-burr grinder."
+  },
+  {
+    "id": "option-o-lagom-casa",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Option-O",
+    "model": "Lagom Casa",
+    "patterns": [
+      "\\blagom\\s+casa\\b",
+      "\\boption[\\s-]?o\\s+casa\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 900,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "Premium 64mm flat-burr single doser; sits at the top of the ~$1k bracket. Very strong enthusiast demand."
+  },
+  {
+    "id": "option-o-lagom-mini",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Option-O",
+    "model": "Lagom Mini",
+    "patterns": [
+      "\\blagom\\s+mini\\b",
+      "\\boption[\\s-]?o\\s+mini\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 420,
+    "resaleMedianAUD": 520,
+    "resaleHighAUD": 620,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Compact flat-burr single doser from Option-O."
+  },
+  {
+    "id": "turin-df54",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Turin / DF",
+    "model": "DF54",
+    "patterns": [
+      "\\bdf\\s?54\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 330,
+    "resaleMedianAUD": 400,
+    "resaleHighAUD": 480,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "54mm flat-burr single doser; budget-friendly DF64 sibling."
+  },
+  {
+    "id": "turin-sd40",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Turin / DF",
+    "model": "SD40",
+    "patterns": [
+      "\\bturin\\s+sd\\s?40\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 330,
+    "resaleMedianAUD": 400,
+    "resaleHighAUD": 480,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "40mm conical-burr single doser from Turin."
+  },
+  {
+    "id": "eureka-atom-65",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Atom 65",
+    "patterns": [
+      "\\beureka\\s+atom\\s+65\\w*\\b",
+      "\\batom\\s+65\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 900,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "65mm flat-burr on-demand grinder; fast, quiet and sought after."
+  },
+  {
+    "id": "eureka-atom-75",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Atom 75 / Atom Specialita",
+    "patterns": [
+      "\\beureka\\s+atom\\s+(?:specialit[aà]\\s+)?75\\w*\\b",
+      "\\batom\\s+specialit[aà]\\b",
+      "\\batom\\s+75\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 800,
+    "resaleMedianAUD": 950,
+    "resaleHighAUD": 1100,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "75mm flat-burr on-demand grinder; top of the bracket."
+  },
+  {
+    "id": "eureka-mignon-libra",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Libra",
+    "patterns": [
+      "\\bmignon\\s+libra\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 520,
+    "resaleMedianAUD": 620,
+    "resaleHighAUD": 720,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Mignon with built-in scale/timed dosing."
+  },
+  {
+    "id": "eureka-mignon-perfetto",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Perfetto",
+    "patterns": [
+      "\\bmignon\\s+perfetto\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 500,
+    "resaleMedianAUD": 600,
+    "resaleHighAUD": 700,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Touchscreen timed-dose Mignon."
+  },
+  {
+    "id": "eureka-mignon-facile",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Eureka",
+    "model": "Mignon Facile / Manuale",
+    "patterns": [
+      "\\bmignon\\s+(?:facile|manuale)\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 380,
+    "resaleMedianAUD": 450,
+    "resaleHighAUD": 530,
+    "liquidity": "high",
+    "demandScore": 7,
+    "notes": "Entry-level Mignon; reliable and liquid."
+  },
+  {
+    "id": "baratza-vario-plus",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Baratza",
+    "model": "Vario / Vario+",
+    "patterns": [
+      "\\bbaratza\\s+vario\\b",
+      "\\bvario\\s?\\+"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 350,
+    "resaleMedianAUD": 430,
+    "resaleHighAUD": 520,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Ceramic/steel flat-burr; check burr wear and hopper."
+  },
+  {
+    "id": "baratza-virtuoso-plus",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Baratza",
+    "model": "Virtuoso+",
+    "patterns": [
+      "\\bbaratza\\s+virtuoso\\b",
+      "\\bvirtuoso\\s?\\+"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 150,
+    "resaleMedianAUD": 190,
+    "resaleHighAUD": 240,
+    "liquidity": "high",
+    "demandScore": 7,
+    "notes": "Popular filter/espresso-capable conical grinder."
+  },
+  {
+    "id": "baratza-encore",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Baratza",
+    "model": "Encore (non-ESP)",
+    "patterns": [
+      "\\bbaratza\\s+encore\\b"
+    ],
+    "excludePatterns": [
+      "\\besp\\b"
+    ],
+    "resaleLowAUD": 110,
+    "resaleMedianAUD": 150,
+    "resaleHighAUD": 190,
+    "liquidity": "high",
+    "demandScore": 7,
+    "notes": "Classic entry grinder; high turnover."
+  },
+  {
+    "id": "mahlkonig-x54",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Mahlkönig",
+    "model": "X54",
+    "patterns": [
+      "\\bmahlk[oöo]e?nig\\s+x\\s?54\\b",
+      "\\bx54\\s+grinder\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 800,
+    "resaleHighAUD": 950,
+    "liquidity": "medium",
+    "demandScore": 8,
+    "notes": "Allround home grinder with 54mm burrs; hard to find used."
+  },
+  {
+    "id": "mazzer-major",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Mazzer",
+    "model": "Major",
+    "patterns": [
+      "\\bmazzer\\s+major\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 600,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 950,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "83mm flat-burr commercial-grade grinder; check burr wear."
+  },
+  {
+    "id": "macap-m2-m4",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Macap",
+    "model": "M2 / M4 / M5",
+    "patterns": [
+      "\\bmacap\\s+m[245]\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 350,
+    "resaleMedianAUD": 450,
+    "resaleHighAUD": 550,
+    "liquidity": "medium",
+    "demandScore": 6,
+    "notes": "Italian on-demand grinder; check burr wear."
+  },
+  {
+    "id": "compak-k3-e5",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Compak",
+    "model": "K3 / E5",
+    "patterns": [
+      "\\bcompak\\s+(?:k3|e5|e6)\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 420,
+    "resaleMedianAUD": 530,
+    "resaleHighAUD": 650,
+    "liquidity": "medium",
+    "demandScore": 6,
+    "notes": "Commercial-style grinder; bulky but solid."
+  },
+  {
+    "id": "rancilio-rocky",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Rancilio",
+    "model": "Rocky",
+    "patterns": [
+      "\\brancilio\\s+rocky\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 350,
+    "resaleMedianAUD": 450,
+    "resaleHighAUD": 550,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Classic doserless/doser grinder; pairs with Silvia."
+  },
+  {
+    "id": "fiorenzato-f64-evo",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Fiorenzato",
+    "model": "F64 Evo",
+    "patterns": [
+      "\\bfiorenzato\\s+f64\\b",
+      "\\bf64\\s+evo\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 700,
+    "resaleMedianAUD": 850,
+    "resaleHighAUD": 1000,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "64mm flat-burr Italian grinder."
+  },
+  {
+    "id": "ceado-e37s",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Ceado",
+    "model": "E37S",
+    "patterns": [
+      "\\bceado\\s+e37\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 750,
+    "resaleMedianAUD": 900,
+    "resaleHighAUD": 1050,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "83mm flat-burr; hard to find used, top of bracket."
+  },
+  {
+    "id": "fellow-opus",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Fellow",
+    "model": "Opus",
+    "patterns": [
+      "\\bfellow\\s+opus\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 170,
+    "resaleMedianAUD": 210,
+    "resaleHighAUD": 260,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Conical all-rounder; good turnover."
+  },
+  {
+    "id": "timemore-078s",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Timemore",
+    "model": "Sculptor 078 / 078S",
+    "patterns": [
+      "\\bsculptor\\s+078\\w*\\b",
+      "\\btimemore\\s+078\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 650,
+    "resaleMedianAUD": 780,
+    "resaleHighAUD": 900,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "78mm flat-burr variable-RPM single doser."
+  },
+  {
+    "id": "varia-vs3",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Varia",
+    "model": "VS3",
+    "patterns": [
+      "\\bvaria\\s+vs3\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 330,
+    "resaleMedianAUD": 400,
+    "resaleHighAUD": 480,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Single-dose flat-burr grinder."
+  },
+  {
+    "id": "breville-bcg600",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Breville",
+    "model": "Dose Control Pro (BCG600)",
+    "patterns": [
+      "\\bdose\\s+control\\s+pro\\b",
+      "\\bbcg\\s?600\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 100,
+    "resaleMedianAUD": 130,
+    "resaleHighAUD": 170,
+    "liquidity": "high",
+    "demandScore": 7,
+    "notes": "Sub-$200 grinder; flip only when bought cheap."
+  },
+  {
+    "id": "1zpresso-jx-pro",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "1Zpresso",
+    "model": "JX / JX-Pro",
+    "patterns": [
+      "\\b1\\s?zpresso\\s+jx[\\s-]?(?:pro|max)?\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 160,
+    "resaleMedianAUD": 200,
+    "resaleHighAUD": 250,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Top hand grinder; fast resale."
+  },
+  {
+    "id": "1zpresso-k-series",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "1Zpresso",
+    "model": "K-Ultra / K-Plus / K-Max",
+    "patterns": [
+      "\\b1\\s?zpresso\\s+k[\\s-]?(?:ultra|plus|max|pro)\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 250,
+    "resaleMedianAUD": 320,
+    "resaleHighAUD": 400,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Premium hand grinder; strong demand."
+  },
+  {
+    "id": "comandante-c40",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Comandante",
+    "model": "C40",
+    "patterns": [
+      "\\bcomandante\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 260,
+    "resaleMedianAUD": 320,
+    "resaleHighAUD": 390,
+    "liquidity": "high",
+    "demandScore": 8,
+    "notes": "Benchmark hand grinder; sells fast."
+  },
+  {
+    "id": "kinu-m47",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Kinu",
+    "model": "M47",
+    "patterns": [
+      "\\bkinu\\s+m47\\w*\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 280,
+    "resaleMedianAUD": 350,
+    "resaleHighAUD": 430,
+    "liquidity": "medium",
+    "demandScore": 7,
+    "notes": "Premium hand grinder."
+  },
+  {
+    "id": "kingrinder-k6",
+    "category": "coffee",
+    "subCategory": "grinder",
+    "brand": "Kingrinder",
+    "model": "K4 / K6",
+    "patterns": [
+      "\\bkingrinder\\s+k[\\s-]?[46]\\b"
+    ],
+    "excludePatterns": [],
+    "resaleLowAUD": 120,
+    "resaleMedianAUD": 150,
+    "resaleHighAUD": 190,
+    "liquidity": "high",
+    "demandScore": 7,
+    "notes": "Budget hand grinder with good demand."
   },
   {
     "id": "bambu-a1-mini",
