@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-11-20T01:53:14.685Z",
+  "generatedAt": "2026-11-20T16:20:54.185Z",
   "location": "Blacktown / Sydney, NSW",
   "mode": "live",
   "stats": {
     "scanned": 9,
-    "rejectedBroken": 3,
+    "rejectedBroken": 2,
     "matchedCatalog": 0,
     "dealsFound": 0
   },
