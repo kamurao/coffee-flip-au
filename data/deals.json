@@ -1,12 +1,39 @@
 {
-  "generatedAt": "2026-11-20T16:20:54.185Z",
+  "generatedAt": "2026-11-21T01:43:14.205Z",
   "location": "Blacktown / Sydney, NSW",
   "mode": "live",
   "stats": {
     "scanned": 9,
     "rejectedBroken": 2,
-    "matchedCatalog": 0,
-    "dealsFound": 0
+    "matchedCatalog": 1,
+    "dealsFound": 1
   },
-  "deals": []
+  "deals": [
+    {
+      "id": "1407729284765910",
+      "title": "Professional Coffee Grinder - Mazzer Super Jolly DR",
+      "askPriceAUD": 399,
+      "location": "Sydney, Australia",
+      "url": "https://www.facebook.com/marketplace/item/1407729284765910",
+      "image": "",
+      "description": "",
+      "postedAt": "2026-11-21T01:43:14.198Z",
+      "catalogId": "mazzer-mini",
+      "category": "coffee",
+      "subCategory": "grinder",
+      "brand": "Mazzer",
+      "model": "Mazzer Mini / Super Jolly",
+      "resaleLowAUD": 420,
+      "resaleMedianAUD": 550,
+      "resaleHighAUD": 700,
+      "netProfitAUD": 151,
+      "profitPct": 38,
+      "tier": "30%+",
+      "liquidity": "medium",
+      "demandScore": 7,
+      "maxBuyFor30Pct": 423,
+      "maxBuyFor50Pct": 366,
+      "notes": "Built like a tank; check burr wear."
+    }
+  ]
 }
