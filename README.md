@@ -18,13 +18,19 @@ Automated, **PC-free** Facebook Marketplace deal finder for **high-volume, high-
 
 ### 2. Set up instant phone notifications (easiest: ntfy.sh)
 1. Install the free **ntfy** app on iOS or Android.
-2. Subscribe to a unique private topic name, e.g. `coffeeflip-au-yourname-9482`.
+2. Subscribe to a **long random** topic name. On ntfy.sh, the topic name works like a password: anyone who knows it can read your alerts or send fake ones. Generate one with:
+   ```bash
+   echo "coffeeflip-$(openssl rand -hex 12)"
+   ```
+   Don't use your name, suburb or anything guessable, and never commit the topic to this repo.
    *(Alternatively, you can use a Discord Webhook or Telegram Bot.)*
 
 ### 3. Add GitHub Secrets
 In this repository, go to **Settings → Secrets and variables → Actions → New repository secret**:
 - `APIFY_TOKEN` — your Apify API token
 - `NTFY_TOPIC` — your private ntfy topic name *(or `DISCORD_WEBHOOK_URL`, or `TELEGRAM_BOT_TOKEN` + `TELEGRAM_CHAT_ID`)*
+
+> **Keep secrets out of the code.** Only put tokens, webhook URLs and the ntfy topic in GitHub Secrets. If this repo is public, everything else in it (including `config/settings.json` and `docs/data/`) is visible to anyone. If a secret is ever exposed, rotate it with the provider first, then update the GitHub Secret.
 
 ### 4. Set your Australian city
 Edit [`config/settings.json`](config/settings.json) and change `location.citySlug` (e.g. `melbourne`, `sydney`, `brisbane`, `perth`, `adelaide`).
