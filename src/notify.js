@@ -13,6 +13,13 @@ export async function sendAlerts(newDeals, env = process.env) {
   const tgToken = env.TELEGRAM_BOT_TOKEN?.trim();
   const tgChatId = env.TELEGRAM_CHAT_ID?.trim();
 
+  // ntfy.sh topics are public: anyone who knows the name can read or spoof alerts.
+  if (ntfyTopic && ntfyTopic.length < 20) {
+    console.warn(
+      "[CoffeeFlip AU] Warning: NTFY_TOPIC is short and may be guessable. Use a long random name (see README)."
+    );
+  }
+
   for (const deal of newDeals) {
     const emoji = deal.tier === "50%+" ? "🔥" : "✅";
     const summary = `${emoji} ${deal.brand} ${deal.model} — $${deal.askPriceAUD} AUD (Est. Resale $${deal.resaleMedianAUD} | +$${deal.netProfitAUD} / +${deal.profitPct}%)`;

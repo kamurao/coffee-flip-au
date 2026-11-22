@@ -108,11 +108,15 @@ export async function fetchMarketplaceListings(settings, token, queriesOverride)
     return { listings: [], billed: 0 };
   }
 
-  const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(actorId)}/run-sync-get-dataset-items?token=${encodeURIComponent(token)}`;
+  const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(actorId)}/run-sync-get-dataset-items`;
 
   const res = await fetch(endpoint, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+      // Send the token as a header so it never appears in URLs, proxies or logs.
+      Authorization: `Bearer ${token}`,
+    },
     body: JSON.stringify({
       startUrls,
       resultsLimit: resultsPerQuery,
