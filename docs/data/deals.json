@@ -1,39 +1,12 @@
 {
-  "generatedAt": "2026-11-22T15:37:29.178Z",
+  "generatedAt": "2026-11-23T01:06:35.099Z",
   "location": "Blacktown / Sydney, NSW",
   "mode": "live",
   "stats": {
-    "scanned": 12,
-    "rejectedBroken": 1,
-    "matchedCatalog": 1,
-    "dealsFound": 1
+    "scanned": 9,
+    "rejectedBroken": 2,
+    "matchedCatalog": 0,
+    "dealsFound": 0
   },
-  "deals": [
-    {
-      "id": "1445935681048873",
-      "title": "Rancilio Rocky Coffee Grinder",
-      "askPriceAUD": 280,
-      "location": "Canberra, Australian Capital Territory",
-      "url": "https://www.facebook.com/marketplace/item/1445935681048873",
-      "image": "",
-      "description": "",
-      "postedAt": "2026-11-22T15:37:29.170Z",
-      "catalogId": "rancilio-rocky",
-      "category": "coffee",
-      "subCategory": "grinder",
-      "brand": "Rancilio",
-      "model": "Rocky",
-      "resaleLowAUD": 350,
-      "resaleMedianAUD": 450,
-      "resaleHighAUD": 550,
-      "netProfitAUD": 170,
-      "profitPct": 61,
-      "tier": "50%+",
-      "liquidity": "medium",
-      "demandScore": 7,
-      "maxBuyFor30Pct": 346,
-      "maxBuyFor50Pct": 300,
-      "notes": "Classic doserless/doser grinder; pairs with Silvia."
-    }
-  ]
+  "deals": []
 }
