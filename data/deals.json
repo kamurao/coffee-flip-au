@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-23T19:27:50.399Z",
+  "generatedAt": "2026-11-24T04:57:29.052Z",
   "location": "Blacktown / Sydney, NSW",
   "mode": "live",
   "stats": {
-    "scanned": 9,
+    "scanned": 5,
     "rejectedBroken": 1,
     "matchedCatalog": 1,
     "dealsFound": 1
@@ -17,7 +17,7 @@
       "url": "https://www.facebook.com/marketplace/item/1407729284765910",
       "image": "",
       "description": "",
-      "postedAt": "2026-11-23T19:27:50.390Z",
+      "postedAt": "2026-11-24T04:57:29.046Z",
       "catalogId": "mazzer-mini",
       "category": "coffee",
       "subCategory": "grinder",
