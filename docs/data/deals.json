@@ -1,39 +1,39 @@
 {
-  "generatedAt": "2026-11-24T04:57:29.052Z",
+  "generatedAt": "2026-11-24T19:03:26.295Z",
   "location": "Blacktown / Sydney, NSW",
   "mode": "live",
   "stats": {
-    "scanned": 5,
+    "scanned": 12,
     "rejectedBroken": 1,
     "matchedCatalog": 1,
     "dealsFound": 1
   },
   "deals": [
     {
-      "id": "1407729284765910",
-      "title": "Professional Coffee Grinder - Mazzer Super Jolly DR",
-      "askPriceAUD": 399,
+      "id": "2974205182934090",
+      "title": "DF54 Coffee Grinder – Excellent Condition",
+      "askPriceAUD": 300,
       "location": "Sydney, Australia",
-      "url": "https://www.facebook.com/marketplace/item/1407729284765910",
+      "url": "https://www.facebook.com/marketplace/item/2974205182934090",
       "image": "",
       "description": "",
-      "postedAt": "2026-11-24T04:57:29.046Z",
-      "catalogId": "mazzer-mini",
+      "postedAt": "2026-11-24T19:03:26.279Z",
+      "catalogId": "turin-df54",
       "category": "coffee",
       "subCategory": "grinder",
-      "brand": "Mazzer",
-      "model": "Mazzer Mini / Super Jolly",
-      "resaleLowAUD": 420,
-      "resaleMedianAUD": 550,
-      "resaleHighAUD": 700,
-      "netProfitAUD": 151,
-      "profitPct": 38,
+      "brand": "Turin / DF",
+      "model": "DF54",
+      "resaleLowAUD": 330,
+      "resaleMedianAUD": 400,
+      "resaleHighAUD": 480,
+      "netProfitAUD": 100,
+      "profitPct": 33,
       "tier": "30%+",
       "liquidity": "medium",
       "demandScore": 7,
-      "maxBuyFor30Pct": 423,
-      "maxBuyFor50Pct": 366,
-      "notes": "Built like a tank; check burr wear."
+      "maxBuyFor30Pct": 307,
+      "maxBuyFor50Pct": 266,
+      "notes": "54mm flat-burr single doser; budget-friendly DF64 sibling."
     }
   ]
 }
